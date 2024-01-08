@@ -14,5 +14,7 @@ public class StreamsExample2_infiniteSequentialStream {
 
         listStrings.stream().distinct().forEach(System.out::println);
 
+        System.out.println("infinite sequantial unordered stream");
+        System.out.println("");
 }
 }
