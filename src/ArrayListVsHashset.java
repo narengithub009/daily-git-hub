@@ -22,5 +22,7 @@ public class ArrayListVsHashset {
         set.add("Set Hello");
 
         set.stream().forEach(System.out::println);
+
+        
     }
 }
