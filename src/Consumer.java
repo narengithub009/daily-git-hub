@@ -6,7 +6,7 @@ interface Consumer {
         
         try(var s=new Scanner(System.in)){
             for(;;){
-                var line-=s.nextLine();
+                var line=s.nextLine();
                 System.out.println("-, "+line);
             }
         }
