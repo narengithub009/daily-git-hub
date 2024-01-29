@@ -9,6 +9,7 @@ public class StringCountExample {
     public static void main(String[] args) {
         
         String input = "iloveloveindia";
+        System.out.println("hello");
 
         Map<String,Long> map= Arrays.stream(input.split("")).
         collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
