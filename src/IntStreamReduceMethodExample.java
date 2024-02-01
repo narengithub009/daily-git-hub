@@ -10,5 +10,6 @@ public class IntStreamReduceMethodExample  {
 
         OptionalInt int1=intStream.reduce((n1,n2)-> n1+n2);
         System.out.println("sum with IntStream reduce () : "+int1.getAsInt());
+        System.out.println("Hello...");
    }   
 }   
