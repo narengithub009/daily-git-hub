@@ -1,8 +1,9 @@
 {
-    "java.project.sourcePaths": ["src"],
-    "java.project.outputPath": "bin",
-    "java.project.referencedLibraries": [
-        "lib/**/*.jar",
-        "c:\\Program Files\\Java\\jdk-17\\lib\\jrt-fs.jar"
-    ]
+  "java.project.sourcePaths": ["src"],
+  "java.project.outputPath": "bin",
+  "java.project.referencedLibraries": [
+    "lib/**/*.jar",
+    "c:\\Program Files\\Java\\jdk-17\\lib\\jrt-fs.jar"
+  ],
+  "java.debug.settings.onBuildFailureProceed": true
 }
