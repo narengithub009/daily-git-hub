@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -21,6 +22,14 @@ public class Main {
                 .get();
 
         System.out.println(string);
+
+        List<String> list = new ArrayList<>();
+        list.add("Narender");
+        list.add("Anny");
+        list.add("Neeraja");
+        list.add("Narender");
+
+        list.stream().filter(s -> s.startsWith("N")).forEach(System.out::println);
     }
 }
 
