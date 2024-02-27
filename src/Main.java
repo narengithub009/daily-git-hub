@@ -30,6 +30,11 @@ public class Main {
         list.add("Narender");
 
         list.stream().filter(s -> s.startsWith("N")).forEach(System.out::println);
+
+        CalculatorInterface calculatorInterface = (a, b) -> {
+            return a + b;
+        };
+        System.out.println(calculatorInterface.sum(10, 10));
     }
 }
 
@@ -48,4 +53,10 @@ class Child extends Parent {
     public void print() {
         System.out.println("Child");
     }
+}
+
+@FunctionalInterface
+public interface CalculatorInterface {
+
+    Integer sum(Integer a, Integer b);
 }
