@@ -11,5 +11,6 @@ public class StreamExample {
 
         Stream<Employee> of = Stream.of(employees);
         of.forEach(System.out::println);
+        System.out.println(of);
     }
 }
