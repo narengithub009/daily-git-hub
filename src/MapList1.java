@@ -14,7 +14,8 @@ public class MapList1 {
         List<Integer> keyList = new ArrayList<>(map.keySet());
         List<String> keyValues = new ArrayList<>(map.values());
 
-        System.out.println("Key List: " + keyList);
+        
+        System.out.println("Key List: "+);
         System.out.println("Key Values: " + keyValues);
     }
 }
