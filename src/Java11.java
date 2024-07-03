@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.Stream;
 
 public class Java11 {
@@ -24,6 +25,9 @@ public class Java11 {
         list.add("World");
 
         list.stream().map(String::toUpperCase).forEach(System.out::println);
+
+        List<String> cList = List.of("Apple", "Banana");
+        cList.stream().forEach(System.out::println);
 
     }
 }

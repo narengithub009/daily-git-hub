@@ -1,24 +1,17 @@
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
 import java.util.logging.Logger;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 public class Pop {
-    private static Logger logger = Logger.getLogger(Pop.class.getName());
 
     public static void main(String[] args) {
 
-        String str = "Hello how are you";
-        String result = "";
-
-        for (int i = str.length() - 1; i >= 0; i--) {
-            result = result + str.charAt(i);
-        }
-        logger.info("The reverse string is ");
-        System.out.println(result);
+        String str = "Hellojavahowareyou";
+        Map<String, List<String>> dupVal = Arrays.stream(str.split("")).collect(Collectors.groupingBy(s -> s));
+        System.out.println(Arrays.toString(dupVal));
 
     }
-}
-
-@FunctionalInterface
-public interface InnerPop {
-
-    String msg(String s);
 }
