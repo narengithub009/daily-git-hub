@@ -1,9 +1,9 @@
 public class Employee1 {
     private String name;
     private int id;
-    private double salary;
+    private int salary;
 
-    public Employee1(String name, int id, double salary) {
+    public Employee1(String name, int id, int salary) {
         this.name = name;
         this.id = id;
         this.salary = salary;
@@ -19,6 +19,31 @@ public class Employee1 {
         return salary * 12;
 
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getSalary() {
+        return salary;
+    }
+
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
+
 }
 
 /**
@@ -28,7 +53,7 @@ class Manager extends Employee1 {
 
     private String department;
 
-    public Manager(String name, int id, double salary, String department) {
+    public Manager(String name, int id, int salary, String department) {
         super(name, id, salary);
         this.department = department;
     }
@@ -49,7 +74,7 @@ class Manager extends Employee1 {
 class Developer extends Employee1 {
     private String proLanguage;
 
-    public Developer(String name, int id, double salary, String proLanguage) {
+    public Developer(String name, int id, int salary, String proLanguage) {
         super(name, id, salary);
         this.proLanguage = proLanguage;
     }
