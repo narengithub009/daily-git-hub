@@ -50,8 +50,39 @@ public class HelloTest {
         Integer sum = numList.parallelStream().reduce(0, (a, b) -> a + b);
         System.out.println(sum);
 
+        Optional<String> nullableValue = Optional.ofNullable(null);
+        System.out.println(nullableValue.orElseGet(() -> "Default Value"));
+
+        System.out.println("****************");
+
+        System.out.println("factotial of " + HelloTest.factorial(3));
+
+        System.out.println("The given string is : " + HelloTest.isPalindrom("Madama"));
     }
 
+    public static int factorial(int num) {
+
+        /*
+         * int result = 1;
+         * for (int i = 1; i <= num; i++) {
+         * result *= i;
+         * 
+         * }
+         */
+        if (num == 1)
+            return 1;
+
+        return num * factorial(num - 1);
+
+    }
+
+    public static boolean isPalindrom(String str) {
+
+        String builder = new StringBuilder(str).reverse().toString();
+
+        return str.equalsIgnoreCase(builder);
+
+    }
 }
 
 @FunctionalInterface
