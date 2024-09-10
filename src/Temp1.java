@@ -1,6 +1,11 @@
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Optional;
+
 public class Temp1 {
 
-    String balacedStr = "{(ss[ss])}";
+    static String balacedStr = "{(ss[ss])}";
 
     public static void verifyString(String unBalacedStr) {
 
@@ -18,6 +23,17 @@ public class Temp1 {
     }
 
     public static void main(String[] args) {
-        Temp1.verifyString("{(ss[ss]");
+        // Temp1.verifyString("{(ss[ss]");
+
+        List<Integer> list = Arrays.asList(2, 3, 4, 4, 5, 7, 8);
+        Optional<Integer> first = list.stream().sorted(reverseOrder())
+                .skip(1)
+                .findFirst();
+        System.out.println(first);
+    }
+
+    private static Comparator<? super Integer> reverseOrder() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'reverseOrder'");
     }
 }
