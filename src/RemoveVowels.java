@@ -32,5 +32,8 @@ public class RemoveVowels {
 
         List<Integer> skipStream = Stream.of(integers).skip(5).collect(Collectors.toList());
         System.out.println(skipStream);
+
+        names.parallelStream()
+                .forEach(name -> System.out.println(Thread.currentThread().getName() + " " + name));
     }
 }
