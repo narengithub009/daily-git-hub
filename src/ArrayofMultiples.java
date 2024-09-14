@@ -11,7 +11,7 @@ public class ArrayofMultiples {
             // num = result[i];
         }
 
-        // System.out.println(Arrays.toString(result));
+        System.out.println(Arrays.toString(result));
         return result;
     }
 
