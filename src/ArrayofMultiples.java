@@ -12,6 +12,7 @@ public class ArrayofMultiples {
         }
 
         // System.out.println(Arrays.toString(result));
+        System.out.println("***************************");
         return result;
     }
 
