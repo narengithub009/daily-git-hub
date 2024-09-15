@@ -19,6 +19,7 @@ public class ArrayofMultiples {
          * return result;
          */
         System.out.println("Herooo");
+        System.out.println("Hello");
         return IntStream.range(1, length + 1).map(n -> n * num).toArray();
     }
 
