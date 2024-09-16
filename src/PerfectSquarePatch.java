@@ -21,6 +21,7 @@ public class PerfectSquarePatch {
             System.out.println(",");
         }
         // return result;
+        System.out.println("Here is the programs solved...");
 
     }
 
