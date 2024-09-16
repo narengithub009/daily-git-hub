@@ -20,7 +20,7 @@ public class ArraySum {
     public static void main(String[] args) {
         int[] arrayInt = { 1, 2 };
 
-        // System.out.println(ArraySum.arraySum(arrayInt));
+         System.out.println(ArraySum.arraySum(arrayInt));
 
         System.out.println(ArraySum.findSum(arrayInt, arrayInt.length));
     }
