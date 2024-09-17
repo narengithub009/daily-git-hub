@@ -2,7 +2,6 @@ public class AddingNumbers {
 
     public static String add(String a, String b) {
         if (a.isEmpty() || b.isEmpty()) {
-            System.out.println("Invalid inputs...");
             return "Invalid Operations";
         }
         try {
