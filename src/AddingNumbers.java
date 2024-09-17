@@ -16,7 +16,7 @@ public class AddingNumbers {
     }
 
     public static void main(String[] args) {
-        String string = AddingNumbers.add("num", "12");
+        String string = AddingNumbers.add(null, "12");
         System.out.println(string);
     }
 }
