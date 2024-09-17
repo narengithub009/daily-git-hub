@@ -8,7 +8,7 @@ public class AddingNumbers {
             int num1 = Integer.parseInt(a);
             int num2 = Integer.parseInt(b);
             System.out.println("Normal flow...");
-            return String.valueOf(num1 + num2);q
+            return String.valueOf(num1 + num2);
         } catch (NumberFormatException e) {
             return "Invalid Operation : Non numaric input...";
         }
