@@ -1,9 +1,9 @@
 public class CountTrue {
 
-    public static int countTrue(String[] str) {
+    public static int countTrue(Boolean[] str) {
         int count = 0;
-        for (String st : str) {
-            if (st.charAt(0) == 't') {
+        for (Boolean st : str) {
+            if (st != null && st) {
                 count++;
             }
         }
@@ -13,7 +13,7 @@ public class CountTrue {
     }
 
     public static void main(String[] args) {
-        String[] str = { "false", "false", "false", "false", "false" };
+        Boolean[] str = { false, null, true };
         System.out.println(countTrue(str));
     }
 }
