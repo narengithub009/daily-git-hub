@@ -1,10 +1,12 @@
+package Old;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class StreamsExample2_infiniteSequentialStream {
     public static void main(String[] args) {
-        
-        List<String> listStrings=new ArrayList<>();
+
+        List<String> listStrings = new ArrayList<>();
 
         listStrings.add("a");
         listStrings.add("b");
@@ -16,5 +18,5 @@ public class StreamsExample2_infiniteSequentialStream {
 
         System.out.println("infinite sequantial unordered stream");
         System.out.println("");
-}
+    }
 }

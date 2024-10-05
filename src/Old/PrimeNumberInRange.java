@@ -1,3 +1,5 @@
+package Old;
+
 public class PrimeNumberInRange {
 
     public static boolean primeNumberInRange(int a, int b) {
