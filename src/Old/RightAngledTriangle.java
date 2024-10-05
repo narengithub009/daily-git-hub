@@ -1,3 +1,5 @@
+package Old;
+
 public class RightAngledTriangle {
 
     public static boolean isRightAngledTriangle(int x, int y, int z) {

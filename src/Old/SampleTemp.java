@@ -1,3 +1,5 @@
+package Old;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -68,7 +70,7 @@ class SampleTemp {
 
         stringList.stream().distinct().forEach(System.out::println);
         String optional = stringList.stream().findFirst().orElse("default");
-        
+
     }
 }
 

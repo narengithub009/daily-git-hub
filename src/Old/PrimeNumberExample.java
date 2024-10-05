@@ -1,3 +1,5 @@
+package Old;
+
 public class PrimeNumberExample {
 
     public static void main(String[] args) {
