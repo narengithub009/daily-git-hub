@@ -2,6 +2,8 @@ package Java8;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 public class MapFlatMapExample {
 
@@ -36,5 +38,14 @@ public class MapFlatMapExample {
 
         System.out.println(employees);
 
+        List<Integer> collect = employees.stream().map(emp -> emp.getId()).collect(Collectors.toList());
+        System.out.println(collect);
+
+        employees.stream().map(emp -> emp.getAddressList()).collect(Collectors.toSet())
+                .forEach(System.out::println);
+
+        Set<String> flatMapList = employees.stream().flatMap(emp -> emp.getAddressList().stream())
+                .collect(Collectors.toSet());
+        System.out.println(flatMapList);
     }
 }
