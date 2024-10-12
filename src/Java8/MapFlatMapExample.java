@@ -13,7 +13,7 @@ public class MapFlatMapExample {
         addressList1.add("Hyd");
         addressList1.add("Pune");
         addressList1.add("Banglore");
-        addressList1.add("Chennai");
+        addressList1.add("Chennai Chennai");
 
         Employee employee1 = new Employee(122, "Naren", addressList1);
 
