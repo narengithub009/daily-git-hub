@@ -21,7 +21,8 @@ public class TrendingItems {
     }
 
     public static void main(String[] args) {
-        List<String> items = Arrays.asList("item1", "item2", "item3", "item4", "item5", "item6");
+        List<String> items = Arrays.asList("item1", "item2", "item3", "item3", "item1", "item2", "item1", "item4",
+                "item5", "item4", "item2");
         List<String> topTrendingItems = findTopTrendingItems(items, 3);
         System.out.println(topTrendingItems);
     }
