@@ -91,5 +91,6 @@ public class MaxSalaryEmployee {
                 .sum();
 
         System.out.println(sum);
+
     }
 }
