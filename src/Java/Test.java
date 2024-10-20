@@ -13,7 +13,7 @@ public class Test {
         System.out.println(stringBuffer.hashCode() + " " + stringBuffer);
         stringBuffer.append(" From Strings");
         System.out.println(stringBuffer.hashCode() + " " + stringBuffer);
-        String str = "Hello1";
+
         String str1 = "Hello1";
 
         String str2 = new String("Hello1");
@@ -26,5 +26,10 @@ public class Test {
         char[] cs = { 'a', 'b', 'c', 'f', 'g' };
         String chars = new String(cs);
         System.out.println(chars);
+
+        stringBuffer.insert(5, " ***Insert***");
+        System.out.println(stringBuffer);
+        stringBuffer.reverse();
+
     }
 }
