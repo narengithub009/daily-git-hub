@@ -5,8 +5,6 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-import Java.Student.SortByName;
-
 public class InterfaceComparator {
 
     public static void main(String[] args) {
