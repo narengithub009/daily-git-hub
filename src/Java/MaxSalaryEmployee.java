@@ -92,5 +92,10 @@ public class MaxSalaryEmployee {
 
                 System.out.println(sum);
 
+                // Emplyee max salary
+
+                // Optional<Employee> highestSalaryEmployee = employees.stream()
+                // .max((e1, e2) -> Double.compare(e1.getSalary(), e2.getSalary()));
+
         }
 }
