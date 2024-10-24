@@ -48,6 +48,6 @@ public class Test {
         stringBuffer.insert(5, " ***Insert***");
         System.out.println(stringBuffer);
         stringBuffer.reverse();
-
+        System.out.println("updated....");
     }
 }
