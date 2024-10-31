@@ -13,5 +13,13 @@ public class MergeTwoArrays {
         int[] concatArray = IntStream.concat(Arrays.stream(intarray1), Arrays.stream(intarray2)).sorted().toArray();
         System.out.println(Arrays.toString(concatArray));
 
+        // Merging two arrays with distinct values...
+
+        int[] distinctArray = IntStream
+                .concat(Arrays.stream(intarray1), Arrays.stream(intarray2))
+                .sorted()
+                .distinct().toArray();
+
+        System.out.println(Arrays.toString(distinctArray));
     }
 }
