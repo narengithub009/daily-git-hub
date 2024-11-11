@@ -11,9 +11,9 @@ public class PrintDuplicateCharactersInaString {
 
         String str = "Java Concept of the Day Day".replaceAll("\\s+", "").toLowerCase();
         Set<String> set = new HashSet<>();
-        Set<String> duplicateCharacter = Arrays.stream(str.split(""))
+        Set<String> duplicateCharacters = Arrays.stream(str.split(""))
                 .filter(ch -> !set.add(ch))
                 .collect(Collectors.toSet());
-        System.out.println(duplicateCharacter);
+        System.out.println(duplicateCharacters);
     }
 }
