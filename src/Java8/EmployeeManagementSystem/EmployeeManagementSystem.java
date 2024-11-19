@@ -39,5 +39,12 @@ public class EmployeeManagementSystem {
                 .map(Employee::getDeppartment)
                 .distinct()
                 .forEach(System.out::println);
+
+        // What is the average age of male and female employees?
+
+        Map<String, Double> avgAge = employeeList.stream()
+                .collect(Collectors.groupingBy(Employee::getGender, Collectors.averagingInt(Employee::getAge)));
+
+        System.out.println(avgAge);
     }
 }
