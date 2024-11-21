@@ -57,5 +57,12 @@ public class EmployeeManagementSystem {
                 System.out.println("Details of highest salary employeees");
 
                 System.out.println(highestSalary);
+
+                // Get the names of all employees who have joined after 2015?
+                System.out.println("********employees who have joined after 2015************");
+                employeeList.stream()
+                                .filter(emp -> emp.getYearOfJoining() > 2015)
+                                .map(Employee::getName)
+                                .forEach(System.out::println);
         }
 }
