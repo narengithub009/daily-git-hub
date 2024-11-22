@@ -1,10 +1,12 @@
 package Java8.EmployeeManagementSystem;
 
+import java.security.KeyStore.Entry;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class EmployeeManagementSystem {
@@ -64,5 +66,10 @@ public class EmployeeManagementSystem {
                                 .filter(emp -> emp.getYearOfJoining() > 2015)
                                 .map(Employee::getName)
                                 .forEach(System.out::println);
+                // Count the number of employees in each department
+
+                Map<String, Long> numberOfEmployees = employeeList.stream()
+                                .collect(Collectors.groupingBy(Employee::getDeppartment, Collectors.counting()));
+                System.out.println(numberOfEmployees);
         }
 }
