@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Optional;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class EmployeeManagementSystem {
@@ -69,5 +71,16 @@ public class EmployeeManagementSystem {
                 Map<String, Long> numberOfEmployees = employeeList.stream()
                                 .collect(Collectors.groupingBy(Employee::getDeppartment, Collectors.counting()));
                 System.out.println(numberOfEmployees);
+
+                // What is the average salary of each department?
+                Map<String, Double> employeeAvgSalary = employeeList.stream()
+                                .collect(Collectors.groupingBy(Employee::getDeppartment,
+                                                Collectors.averagingDouble(Employee::getSalary)));
+
+                Set<Entry<String, Double>> entrySet = employeeAvgSalary.entrySet();
+
+                for (Entry<String, Double> entry : entrySet) {
+                        System.out.println(entry.getKey() + "  " + entry.getValue());
+                }
         }
 }
