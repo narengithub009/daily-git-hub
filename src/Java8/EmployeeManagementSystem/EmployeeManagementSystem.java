@@ -77,5 +77,10 @@ public class EmployeeManagementSystem {
                                 .filter(e -> e.getGender() == "Male" && e.getDeppartment() == "Product Development")
                                 .min(Comparator.comparingInt(Employee::getAge));
                 System.out.println(minEmpAge);
+                // Who has the most working experience in the organization?
+
+                Optional<Employee> firstEmployee = employeeList.stream()
+                                .sorted(Comparator.comparingInt(Employee::getYearOfJoining)).findFirst();
+                System.out.println(firstEmployee);
         }
 }
