@@ -71,5 +71,11 @@ public class EmployeeManagementSystem {
                 Map<String, Long> numberOfEmployees = employeeList.stream()
                                 .collect(Collectors.groupingBy(Employee::getDeppartment, Collectors.counting()));
                 System.out.println(numberOfEmployees);
+                // Get the details of youngest male employee in the product development
+                // department?
+                Optional<Employee> minEmpAge = employeeList.stream()
+                                .filter(e -> e.getGender() == "Male" && e.getDeppartment() == "Product Development")
+                                .min(Comparator.comparingInt(Employee::getAge));
+                System.out.println(minEmpAge);
         }
 }
