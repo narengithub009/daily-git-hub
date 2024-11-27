@@ -82,5 +82,12 @@ public class EmployeeManagementSystem {
                 Optional<Employee> firstEmployee = employeeList.stream()
                                 .sorted(Comparator.comparingInt(Employee::getYearOfJoining)).findFirst();
                 System.out.println(firstEmployee);
+
+                // How many male and female employees are there in the sales and marketing team?
+
+                Map<String, Long> employeeMapWithDep = employeeList.stream()
+                                .filter(e -> e.getDeppartment() == "Sales And Marketing")
+                                .collect(Collectors.groupingBy(Employee::getGender, Collectors.counting()));
+                System.out.println(employeeMapWithDep);
         }
 }
