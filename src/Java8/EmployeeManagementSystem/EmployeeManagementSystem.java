@@ -89,5 +89,12 @@ public class EmployeeManagementSystem {
                                 .filter(e -> e.getDeppartment() == "Sales And Marketing")
                                 .collect(Collectors.groupingBy(Employee::getGender, Collectors.counting()));
                 System.out.println(employeeMapWithDep);
+
+                // What is the average salary of male and female employees?
+
+                Map<String, Double> avagSalaryByGender = employeeList.stream()
+                                .collect(Collectors.groupingBy(Employee::getGender,
+                                                Collectors.averagingDouble(Employee::getSalary)));
+                System.out.println(avagSalaryByGender);
         }
 }
