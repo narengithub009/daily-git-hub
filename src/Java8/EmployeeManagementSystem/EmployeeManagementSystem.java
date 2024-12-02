@@ -92,9 +92,9 @@ public class EmployeeManagementSystem {
 
                 // What is the average salary of male and female employees?
 
-                Map<String, Double> avagSalaryByGender = employeeList.stream()
+                Map<String, Double> avagSalaryByGenders = employeeList.stream()
                                 .collect(Collectors.groupingBy(Employee::getGender,
                                                 Collectors.averagingDouble(Employee::getSalary)));
-                System.out.println(avagSalaryByGender);
+                System.out.println(avagSalaryByGenders);
         }
 }
