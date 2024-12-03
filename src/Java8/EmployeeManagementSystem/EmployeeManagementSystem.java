@@ -96,5 +96,22 @@ public class EmployeeManagementSystem {
                                 .collect(Collectors.groupingBy(Employee::getGender,
                                                 Collectors.averagingDouble(Employee::getSalary)));
                 System.out.println(avagSalaryByGenders);
+
+                // List down the names of all employees in each department?
+
+                Map<String, List<Employee>> empDeptList = employeeList.stream()
+                                .collect(Collectors.groupingBy(Employee::getDeppartment));
+                Set<Entry<String, List<Employee>>> entrySet = empDeptList.entrySet();
+
+                for (Entry<String, List<Employee>> entry : entrySet) {
+                        System.out.println("--------------------------------------");
+                        System.out.println("Employees In " + entry.getKey() + " : ");
+                        System.out.println("--------------------------------------");
+
+                        List<Employee> list = entry.getValue();
+                        for (Employee e : list) {
+                                System.out.println(e.getName());
+                        }
+                }
         }
 }
