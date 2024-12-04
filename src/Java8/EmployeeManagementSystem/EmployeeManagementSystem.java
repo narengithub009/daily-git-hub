@@ -2,6 +2,7 @@ package Java8.EmployeeManagementSystem;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.DoubleSummaryStatistics;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -113,5 +114,12 @@ public class EmployeeManagementSystem {
                                 System.out.println(e.getName());
                         }
                 }
+
+                // What is the average salary and total salary of the whole organization?
+                DoubleSummaryStatistics avgSalaryEmpAndOrg = employeeList.stream()
+                                .collect(Collectors.summarizingDouble(Employee::getSalary));
+                System.out.println(avgSalaryEmpAndOrg);
+                System.out.println(avgSalaryEmpAndOrg.getAverage());
+                System.out.println(avgSalaryEmpAndOrg.getSum());
         }
 }
