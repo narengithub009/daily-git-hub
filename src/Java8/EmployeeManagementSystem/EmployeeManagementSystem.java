@@ -121,5 +121,29 @@ public class EmployeeManagementSystem {
                 System.out.println(avgSalaryEmpAndOrg);
                 System.out.println(avgSalaryEmpAndOrg.getAverage());
                 System.out.println(avgSalaryEmpAndOrg.getSum());
+
+                // Separate the employees who are younger or equal to 25 years from those
+                // employees who are older than 25 years.
+
+                Map<Boolean, List<Employee>> empCompList = employeeList.stream()
+                                .collect(Collectors.partitioningBy(e -> e.getAge() > 25));
+
+                Set<Entry<Boolean, List<Employee>>> entrySet2 = empCompList.entrySet();
+
+                for (Entry<Boolean, List<Employee>> ent : entrySet2) {
+                        System.out.println("--------------------------");
+                        if (ent.getKey()) {
+                                System.out.println("Employees older than 25 years :");
+                        } else {
+                                System.out.println("Employees younger than or equal to 25 years :");
+                        }
+
+                        System.out.println("-----------------------------------");
+                        List<Employee> value = ent.getValue();
+                        for (Employee emp : value) {
+                                System.out.println(emp.getName());
+                        }
+                }
+
         }
 }
