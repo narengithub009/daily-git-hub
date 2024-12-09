@@ -133,9 +133,9 @@ public class EmployeeManagementSystem {
                 for (Entry<Boolean, List<Employee>> ent : entrySet2) {
                         System.out.println("--------------------------");
                         if (ent.getKey()) {
-                                System.out.println("Employees older than 25 years :");
+                                System.out.println("Employee's older than 25 years :");
                         } else {
-                                System.out.println("Employees younger than or equal to 25 years :");
+                                System.out.println("Employee's younger than or equal to 25 years :");
                         }
 
                         System.out.println("-----------------------------------");
