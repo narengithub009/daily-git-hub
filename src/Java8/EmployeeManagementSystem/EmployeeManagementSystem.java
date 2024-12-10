@@ -145,5 +145,11 @@ public class EmployeeManagementSystem {
                         }
                 }
 
+                // Employee names and salaries
+
+                Map<String, Long> empNames = employeeList.stream()
+                                .filter(e -> e.getDeppartment().equals("Product Development"))
+                                .collect(Collectors.groupingBy(Employee::getName, Collectors.counting()));
+                System.out.println(empNames);
         }
 }
